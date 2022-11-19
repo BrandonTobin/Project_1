@@ -20,7 +20,13 @@ cards.forEach((card) => {
     console.log(card)
     clickedArray.push(card)
     if (clickedArray.length % 2 == 0) {
-      doesMatch(clickedArray)
+      if (doesMatch(clickedArray)) {
+        clickedArray.forEach((card) => {
+          card.classList.toggle('match')
+          card.classList.toggle('clicked')
+          clickedArray = []
+        })
+      }
       console.log(doesMatch(clickedArray))
     }
   })
