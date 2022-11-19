@@ -55,3 +55,7 @@ h4 {
   max-height: 90px;
   opacity: 0;
 }
+
+.card.clicked img {
+opacity: 1;
+}
