@@ -1,5 +1,11 @@
 let clickedArray = []
 
+const button = document.querySelector('.btn')
+
+button.addEventListener('click', () => {
+  console.log('start button working')
+})
+
 function doesMatch(arr) {
   let animalNames = []
 
@@ -15,7 +21,7 @@ function doesMatch(arr) {
 }
 
 function startTimer() {
-  let seconds = 2
+  let seconds = 60
 
   setInterval(() => {
     seconds--

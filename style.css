@@ -17,11 +17,21 @@ h4 {
   text-align: center;
 }
 
+.btn{
+  width: 150px;
+  height: 50px;
+  background-color: rgb(102, 80, 166);
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+}
+
 .container {
   display: grid;
   place-items: center;
   min-height: 80vh;
 }
+
 
 .heading {
   text-align: center;
