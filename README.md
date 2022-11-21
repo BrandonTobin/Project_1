@@ -4,6 +4,6 @@
 
 ~~if 2 cards are matching, keep visible~~
 
-1 minute timer, if timer finishes you lose
+~~1 minute timer, if timer finishes you lose~~
 
-maybe freeze the ui while the game is checking if a there is a match
+Have timer stop when you win

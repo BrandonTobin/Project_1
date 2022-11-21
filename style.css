@@ -10,11 +10,20 @@ h1, h2{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.loss {
+  color: rgb(219, 120, 219)
+}
+
 h4 {
   display: flex;
   justify-content: center;
   color: white;
   text-align: center;
+}
+
+.btn-wrapper{
+  display: flex;
+  justify-content: center;
 }
 
 .btn{

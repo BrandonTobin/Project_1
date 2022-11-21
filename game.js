@@ -1,8 +1,14 @@
 let clickedArray = []
 
+let matchedArray = []
+
 const container = document.querySelector('.container')
 
 const button = document.querySelector('.btn')
+
+const loss = document.querySelector('.loss')
+
+const winBanner = document.querySelector('.win')
 
 button.addEventListener('click', () => {
   console.log('start button working')
@@ -22,6 +28,10 @@ function doesMatch(arr) {
   return uniqueArray.length == 1
 }
 
+function displayLoss() {
+  loss.classList.toggle('hidden')
+}
+
 function startTimer() {
   let seconds = 60
 
@@ -31,8 +41,14 @@ function startTimer() {
     if (seconds >= 0) {
       let secondsElement = document.querySelector('.seconds')
       secondsElement.innerHTML = seconds
+    } else {
+      displayLoss()
     }
   }, 1000)
+}
+
+function displayWin() {
+  winBanner.classList.toggle('hidden')
 }
 
 function showContainer() {
@@ -61,7 +77,11 @@ cards.forEach((card) => {
           card.classList.toggle('match')
           card.classList.toggle('clicked')
           clickedArray = []
+          matchedArray.push(card)
         })
+        if (matchedArray.length == 12) {
+          displayWin()
+        }
       } else {
         clickedArray.forEach((card) => {
           setTimeout(() => {
