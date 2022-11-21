@@ -8,7 +8,7 @@ Technology used:
 
 Game Images:
 
-![start game image](./images/Screen%20Shot%202022-11-21%20at%207.56.24%20AM.png)
+(./images/Screen%20Shot%202022-11-21%20at%207.56.24%20AM.png)
 
 ![game image](./images/Screen%20Shot%202022-11-21%20at%207.56.36%20AM.png)
 
