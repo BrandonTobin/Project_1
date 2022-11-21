@@ -73,3 +73,11 @@ opacity: 1;
 .card.match img {
   opacity: 1;
 }
+
+.seconds {
+  padding: 0 5px;
+}
+
+.hidden {
+  display: none;
+}

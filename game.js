@@ -1,5 +1,7 @@
 let clickedArray = []
 
+const container = document.querySelector('.container')
+
 const button = document.querySelector('.btn')
 
 button.addEventListener('click', () => {
@@ -33,12 +35,17 @@ function startTimer() {
   }, 1000)
 }
 
+function showContainer() {
+  container.classList.toggle('hidden')
+}
+
 const cards = document.querySelectorAll('.cards .card')
 
-document.addEventListener(
+button.addEventListener(
   'click',
   () => {
     startTimer()
+    showContainer()
   },
   { once: true }
 )
