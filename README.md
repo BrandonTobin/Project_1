@@ -6,4 +6,4 @@
 
 ~~1 minute timer, if timer finishes you lose~~
 
-Have timer stop when you win
+~~Have timer stop when you win~~
