@@ -16,6 +16,8 @@ Game Images:
 
 ![loss screen](./images/Screen%20Shot%202022-11-21%20at%207.58.32%20AM.png)
 
+Linear-Gradient: I thought the background color of the whole document being in a gradient color format would be cool but was unsure how to do it. Here is the link I followed to get the results I was looking for. https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
+
 Instructions: Load into page, click 'start game' button. Match all cards in 1 minute to display YOU WIN! If you fail to match all cards, game displays YOU LOSE.
 
 Next Steps:
