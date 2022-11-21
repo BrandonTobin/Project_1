@@ -2,6 +2,8 @@ let clickedArray = []
 
 let matchedArray = []
 
+let intervalId
+
 const container = document.querySelector('.container')
 
 const button = document.querySelector('.btn')
@@ -28,14 +30,24 @@ function doesMatch(arr) {
   return uniqueArray.length == 1
 }
 
+function resetBoard() {
+  cards.forEach((card) => {
+    card.classList.remove('match')
+  })
+  matchedArray = []
+  winBanner.classList.add('hidden')
+  loss.classList.add('hidden')
+}
+
 function displayLoss() {
+  clearInterval(intervalId)
   loss.classList.toggle('hidden')
 }
 
 function startTimer() {
   let seconds = 60
 
-  setInterval(() => {
+  intervalId = setInterval(() => {
     seconds--
 
     if (seconds >= 0) {
@@ -45,26 +57,25 @@ function startTimer() {
       displayLoss()
     }
   }, 1000)
+  console.log(intervalId)
 }
 
 function displayWin() {
+  clearInterval(intervalId)
   winBanner.classList.toggle('hidden')
 }
 
 function showContainer() {
-  container.classList.toggle('hidden')
+  container.classList.remove('hidden')
 }
 
 const cards = document.querySelectorAll('.cards .card')
 
-button.addEventListener(
-  'click',
-  () => {
-    startTimer()
-    showContainer()
-  },
-  { once: true }
-)
+button.addEventListener('click', () => {
+  startTimer()
+  showContainer()
+  resetBoard()
+})
 
 cards.forEach((card) => {
   card.addEventListener('click', () => {
